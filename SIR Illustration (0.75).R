@@ -61,9 +61,12 @@ sample_output <- SIR_manual(S,I,R,alpha1,alpha2,23)
 
 # Draw some basic plots
 library(ggplot2)
+library(ggplot2)
 plt1 <- ggplot(data = sample_output) + 
   geom_point(mapping = aes(x=t_vec, y=S_vec), color="green") +
   geom_point(mapping = aes(x=t_vec, y=I_vec), color="red") +
-  geom_point(mapping = aes(x=t_vec, y=R_vec), color="blue")
+  geom_point(mapping = aes(x=t_vec, y=R_vec), color="blue") +
+  xlab("Time") + 
+  ylab("Number of Borrowers")
 plt1
 
